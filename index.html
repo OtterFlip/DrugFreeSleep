@@ -4,14 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Escaping Insomnia's Anxiety Trap</title>
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
 <style>
   body {
+    font-family: 'Roboto', sans-serif; /* This is a Google Font */
+    color: #d3baba; /* This is the text color we extracted */
     display: flex;
     justify-content: center;
     margin: 0;
     padding-top: 20px;
     background-color: black; /* Default background color */
-    color: white; /* Default text color */
+    /* color: white; Default text color */
     transition: background-color 0.5s ease, color 0.5s ease;
   }
   .container {
@@ -151,7 +154,7 @@
   <li><a href="https://youtu.be/fHHQ0dJ0rcQ">Andrew Huberman Explains the Benefits of Lateral Eye Movements</a></li>
   </ul>
   <br>
-  <p>Disclaimer:  I am not a doctor.  The content of this site should not be considered to be medical advice.  Seek the counsel of a medical professional before you make any changes that may affect your health.</p>
+  <p>Disclaimer:  I am not a doctor.  The contents of this site should not be considered to be medical advice.  Seek the counsel of a medical professional before you make any changes that may affect your health.</p>
   <p>The contents of this website, <a href="https://drugfreesleep.org">drugfreesleep.org</a>, are Copyright (c) 2024 by NSB, all rights reserved.  Licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons license (CC BY-NC-SA 4.0).</a></p>
 
 
@@ -163,11 +166,11 @@
 
   toggleButton.addEventListener('click', function() {
     if (darkTheme) {
-      document.body.style.backgroundColor = 'white';
+      document.body.style.backgroundColor = '#e0d0d0'; // #d3baba
       document.body.style.color = 'black';
     } else {
       document.body.style.backgroundColor = 'black';
-      document.body.style.color = 'white';
+      document.body.style.color = '#d3baba';
     }
     darkTheme = !darkTheme;
   });
