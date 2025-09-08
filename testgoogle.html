@@ -14,7 +14,22 @@
 </head>
 <body class="bg-gray-100 flex items-center justify-center h-screen">
     <div class="text-center p-8 bg-white rounded-lg shadow-lg">
-        <h1 class="text-2xl font-bold text-gray-800 mb-4">Here is the picture:</h1>
+        <h1 class="text-2xl font-bold text-gray-800 mb-4">Here is the thumbnail:</h1>
+        <!-- 
+          This is the image tag. 
+          The 'src' attribute points to the URL you provided.
+          The 'alt' attribute provides alternative text for screen readers.
+        -->
+        <img 
+          src="https://lh3.googleusercontent.com/p/AF1QipNBkAp919VxWrd-ZYGbsIm3fu9MYBKPTNqAnS_R=w203-h105-k-no" 
+          alt="Thanksgiving Point"
+          class="rounded-md mx-auto"
+          onerror="this.onerror=null;this.src='https://placehold.co/203x105/eee/ccc?text=Image+Not+Found';"
+        >
+    </div>
+    
+    <div class="text-center p-8 bg-white rounded-lg shadow-lg">
+        <h1 class="text-2xl font-bold text-gray-800 mb-4">Here is the full image:</h1>
         <!-- 
           This is the image tag. 
           The 'src' attribute points to the URL you provided.
