@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CORS Test Page</title>
+</head>
+<body>
+
+    <h1>Attempting to Fetch Google Maps with JavaScript</h1>
+    <p>Check the browser's developer console (F12) to see the result.</p>
+    <div id="content">Request pending...</div>
+
+    <script>
+        const url = 'https://maps.google.com';
+        const contentDiv = document.getElementById('content');
+
+        console.log(`Attempting to fetch: ${url}`);
+
+        fetch(url)
+            .then(response => {
+                // This part will likely not be reached
+                if (!response.ok) {
+                    throw new Error(`Network response was not ok: ${response.statusText}`);
+                }
+                return response.text();
+            })
+            .then(html => {
+                // This will not happen, but it's what you'd do if it worked
+                console.log('Success! Received response.');
+                contentDiv.innerHTML = 'Successfully fetched content!';
+            })
+            .catch(error => {
+                // The error will be caught and logged here
+                console.error('Fetch failed:', error);
+                contentDiv.innerHTML = `<strong>Request failed.</strong> See console for the CORS error.`;
+            });
+    </script>
+
+</body>
+</html>
